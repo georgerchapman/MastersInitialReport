@@ -4,4 +4,7 @@ report.bbl
 report.blg
 report.log
 report.pdf
-
+report.fdb_latexmk
+report.fls
+q.log
+report.synctex.gz
