@@ -1,4 +1,4 @@
-\documentclass[11pt,twocolumn]{article}
+\documentclass[11pt]{article}
 \usepackage{geometry} % to change the page dimensions
 \geometry{a4paper} % or letterpaper (US) or a5paper or....
 % \geometry{margin=2in} % for example, change the margins to 2 inches all round
@@ -129,7 +129,14 @@ V_W=\pm\frac{V_F^\phi\sqrt{6}}{2\pi}\sqrt{\left(F^b-F_c^b\right)/F^b}.
 \subsection{Path Memory}
 \label{secpathmemory}
 
+It has been discussed that the walking of the droplet arises due to the wave produced from the previous bounce.  In fact, the surface the droplet bounces off, which provides the horizontal motion, is dependent on a supersition of all previous bounces, assuming an appropriate decay of each wave.  This suggests that the droplet-wave association contains a path memory, where the history of the droplets affects its future motion \cite{8}.  This may be modelled by assuming each bounce produces a spherical wave centered on the positon of the bounce.  It can then shown that the height of the surface $\xi(\bm{r},t_i)$ at positon $\bm{r}$ and time $t_i$ is
+\begin{equation}
+    \label{pathmemory}
+    \xi(\bm{r},t_i)= \sum_{n=-\infty}^{i-1}\Re\left[\frac{A}{\left|\bm{r}-\bm{r_n}\right|^{1/2}}\exp\left(-\frac{t_i-t_n}{\tau}\right)\exp\left(-\frac{\left|\bm{r}-\bm{r_n}\right|}{\delta}\right)\exp\left(i\frac{2\pi\left|\bm{r}-\bm{r_n}\right|}{\lambda_F}+\phi\right)\right],
+\end{equation}
+where $\Re$ denotes the real part, $A$ is the wave amplitude at each impact, $\tau$ is the typical decay time and $\bm{r_n}$ and $t_n$ are the position and time of previous bounces, respectively.  As $\gamma_m$ is increased towards $\gamma_m^F$, $\tau$ is increase and the length of the path memory is therefore increased.
 
+In the case of a large liquid container, the horizontal motion of the walker due to this path memory is simply linear, with a well defined velocity as shown in \eqref{walkervelocity}.  But as the droplet comes close to structures is the liquid container (e.q. the side, or a narrow gap), the waves emitted from the bouncing are reflected off the structures, affecting the horizontal motion of the droplet.  This process essentially provides the droplet with informtion about its surroundings, guiding its trajectory accordingly.
 
 \section{Quantum Mechanical Significance}
 \label{sec:quantummechanicalsignificance}
@@ -175,7 +182,7 @@ where $\epsilon_0$ is a constant and $n=1,2,3,\ldots$ for in-phase bouncing of t
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{LevelSplitting.pdf}
+    \includegraphics[width=0.65\columnwidth]{LevelSplitting.pdf}
     \caption{The splitting $\delta$ of the orbitals as a function of the angular velocity $\Omega$.  Here, $V_n$ is the velocity of the walker in the $n^{th}$ orbit and $\lambda_v=\lambda_F$.  The solid data points are corotating walkers and the hollow points counterrotating walkers.}
     \label{fig:levelsplitting}
 \end{figure}
@@ -196,16 +203,31 @@ which corresponds to $\bm{B}=\bm{\nabla}\times\bm{A}$ from electromagnetism, whe
 
 \subsection{Particle statistics in a Corral}
 \label{sec:particlestatisticsinacorral}
-\begin{figure}[h]
-	\includegraphics[width=\columnwidth]{WalkerCorral.pdf}
-	\caption{Probability distribution of a walking droplets position when confined to a circular corral \cite{12}.}
-	\label{fig:walkercorral}
-\end{figure}
+% \begin{figure}[h]
+% 	\includegraphics[width=\columnwidth]{WalkerCorral.pdf}
+% 	\caption{Probability distribution of a walking droplets position when confined to a circular corral \cite{12}.}
+% 	\label{fig:walkercorral}
+% \end{figure}
+%
+% \begin{figure}[h]
+% 	\includegraphics[width=\columnwidth]{ElectronCorral.pdf}
+% 	\caption{Spatial image of the eigenstates of a quantum corral \cite{21}.}
+% 	\label{fig:electroncorral}
+% \end{figure}
 
 \begin{figure}[h]
-	\includegraphics[width=\columnwidth]{ElectronCorral.pdf}
-	\caption{Spatial image of the eigenstates of a quantum corral \cite{21}.}
-	\label{fig:electroncorral}
+    \centering
+    \begin{minipage}{0.45\columnwidth}
+        \includegraphics[width=\linewidth]{WalkerCorral.pdf}
+        \caption{Probability distribution of a walking droplets position when confined to a circular corral \cite{12}.}
+        \label{fig:walkercorral}
+    \end{minipage}
+    \hspace{1cm}
+    \begin {minipage}{0.45\columnwidth}
+        \includegraphics[width=\linewidth]{ElectronCorral.pdf}
+        \caption{Spatial image of the eigenstates of a quantum corral \cite{21}.}
+        \label{fig:electroncorral}
+   \end{minipage}
 \end{figure}
 
 An experiment carried out by J. Bush et al. \cite{12} has shown that in the long path memory limit, a walkers motion when confined by a corral becomes complex and seemingly random.  A build-up of the walkers position with time however shows that it may depend on the Faraday mode of the corral; the solution to the wave equation with the correct boundary conditions (\figref{fig:walkercorral}).  This statistical dependence of the walker can be compared to the density of states of a two-dimensional electron gas confined to a quantum corral \cite{21}, where measured eigenstates of the corral agree well with those predicted by solving the Schr{\"o}dinger equation for such a corral, as seen in \figref{fig:electroncorral}.
