@@ -50,14 +50,14 @@ Quantum mechanics is the statistical theory that governs the interaction between
 
 However, a recent line of experiments initially conducted by Couder et al.\cite{1} have exhibited results that are remarkably similar to the well-known results of quantum mechanics.  Using a droplet of silicon oil bouncing on the surface of a silicon oil bath, a droplet can be forced into a horizontal motion.  Using this setup, several well-known quantum-mechanical experiments have been recreated, where the `walking' droplet becomes analogous to a quantum particle \cite{1,6,7}.  These experiments demonstrate that there is a coupling between the droplet and the waves created on the surface of the oil due to its bouncing, where the waves 'guide' the motion of the droplet, producing the quantum-like results.
 
-This system is reminiscent of a theory of quantum mechanics originally proposed by De Broglie and later developed by Bohm \cite{17}, where quantum particles are `guided' by the wavefunction of the system and are described as having deterministic trajectories, contrary to the well-known Copenhagen interpretation where the outcome of experiments can only be described statistically.  The system of a walking droplet therefore provides an insightful analogy to the De Broglie-Bohm theory of quantum mechanics.
+This system is reminiscent of a theory of quantum mechanics originally proposed by De Broglie and later developed by Bohm \cite{17}, where quantum particles are `guided' by the wave-function of the system and are described as having deterministic trajectories, contrary to the well-known Copenhagen interpretation where the outcome of experiments can only be described statistically.  The system of a walking droplet therefore provides an insightful analogy to the De Broglie-Bohm theory of quantum mechanics.
 
-This report aims to further investigate this analogy between the macroscopic system of a walking droplet and the De Broglie-Bohm theory of quantum mechanics.  An experiment performed by Bush et al.\cite{12} has shown that walking droplets confined to corrals of the order of the faraday wavelength of the silicon oil exhibit seemingly random motion.  This motion can be viewed statically, with the resulting probability of the walker's position resembling that of a confined quantum particle.  This result will first be replicated under similar conditions, followed by experimentation with corrals of varying shape and size.  The results will be compared to the faraday modes of the corrals and also the theoretical quantum-mechanical results of particles confined to quantum corrals.  A numerical model of the confined droplet will also be created to study the effect of small variations in the dimensions of the corrals.
+This report aims to further investigate this analogy between the macroscopic system of a walking droplet and the De Broglie-Bohm theory of quantum mechanics.  An experiment performed by Bush et al.\cite{12} has shown that walking droplets confined to corrals of the order of the Faraday wavelength of the silicon oil exhibit seemingly random motion.  This motion can be viewed statically, with the resulting probability of the walker's position resembling that of a confined quantum particle.  This result will first be replicated under similar conditions, followed by experimentation with corrals of varying shape and size.  The results will be compared to the Faraday modes of the corrals and also the theoretical quantum-mechanical results of particles confined to quantum corrals.  A numerical model of the confined droplet will also be created to study the effect of small variations in the dimensions of the corrals.
 
 \begin{figure*}[t]
     \centering
     \includegraphics[trim={25mm 15mm 25mm 15mm},clip,width=0.8\textwidth]{PhaseDiagram.pdf}
-    \caption{Phase diagram showing the various regimes of a bouncing droplet of silicon oil as a function of the droplet diameter $D$ and $\gamma_m$, with viscocity $\mu_L=\SI{50}{\milli\pascal\second}$ and driving frequency $\SI{50}{\hertz}$.  In B there is simple bouncing, in PDB period-doubling, in PDC transition to temporal chaos by a period-doubling cascade, in Int the drop has an intermittent behaviour, W is the region of walkers and F the Faraday instability domain where Faraday waves are induced on the free surface \cite{9}.}
+    \caption{Phase diagram showing the various regimes of a bouncing droplet of silicon oil as a function of the droplet diameter $D$ and $\gamma_m$, with viscosity $\mu_L=\SI{50}{\milli\pascal\second}$ and driving frequency $\SI{50}{\hertz}$.  In B there is simple bouncing, in PDB period-doubling, in PDC transition to temporal chaos by a period-doubling cascade, in Int the drop has an intermittent behaviour, W is the region of walkers and F the Faraday instability domain where Faraday waves are induced on the free surface \cite{9}.}
     \label{figphasediagram}
 \end{figure*}
 
@@ -82,16 +82,16 @@ This report aims to further investigate this analogy between the macroscopic sys
 \subsection{Non-coalescence of a droplet}
 \label{secnoncoalescenceofadroplet}
 
-When a droplet of liquid is placed on the surface of the same liquid, coalescence is expected.  There is an instantaneous moment before coalescence where the air layer between the droplet and the fluid interface dissapates \cite{2}.  If the liquid is subject to a vertical oscillation of the form $\gamma(t)=\gamma_m\sin\omega_L t$, where $\gamma_m$ is the maximum acceleration and $\omega_L$ is the angular frequency of oscillation, the droplet lifts off the surface before coalescence, replenishing the air layer.  This periodic dissipating and replenishing of the air layer leads to a stable system of a droplet bouncing on the surface of the liquid.
+When a droplet of liquid is placed on the surface of the same liquid, coalescence is expected.  There is an instantaneous moment before coalescence where the air layer between the droplet and the fluid interface dissipates \cite{2}.  If the liquid is subject to a vertical oscillation of the form $\gamma(t)=\gamma_m\sin\omega_L t$, where $\gamma_m$ is the maximum acceleration and $\omega_L$ is the angular frequency of oscillation, the droplet lifts off the surface before coalescence, replenishing the air layer.  This periodic dissipating and replenishing of the air layer leads to a stable system of a droplet bouncing on the surface of the liquid.
 
-From \figref{figphasediagram}, it can be seen that there exists an upper threshold for $\gamma_m$.  This is the Faraday threshold, $\gamma_m^F$, above which the surface of the liquid becomes spontaneously wavey.
+From \figref{figphasediagram}, it can be seen that there exists an upper threshold for $\gamma_m$.  This is the Faraday threshold, $\gamma_m^F$, above which the surface of the liquid becomes spontaneously wavy.
 
 \subsection{Faraday Waves and Threshold}
 \label{secfaradaywavesandthreshold}
 
-It is a well known that when subject to an oscillating vertical accelaration the surface of a liquid can become unstable, forming exotic standing waves, known as Faraday waves \cite{20}.  These waves occur with a frequency $f_F$ of half the driving frequency \cite{15}.
+It is a well known that when subject to an oscillating vertical acceleration the surface of a liquid can become unstable, forming exotic standing waves, known as Faraday waves \cite{20}.  These waves occur with a frequency $f_F$ of half the driving frequency \cite{15}.
 
-The wavelength of the Faradays waves $\lambda_F$ can be determined from the dispersion relation of a viscous fluid \cite{8},
+The wavelength of the Faraday waves $\lambda_F$ can be determined from the dispersion relation of a viscous fluid \cite{8},
 \begin{equation}
     \label{disp_rel}
     f_F^2=\left[\frac{g}{2\pi\lambda_F}+\frac{\sigma}{\rho}\left(\frac{2\pi}{\lambda_F^3}\right)\right]\tanh\left(\frac{2\pi h_0}{\lambda_F}\right)
@@ -129,14 +129,14 @@ V_W=\pm\frac{V_F^\phi\sqrt{6}}{2\pi}\sqrt{\left(F^b-F_c^b\right)/F^b}.
 \subsection{Path Memory}
 \label{secpathmemory}
 
-It has been discussed that the walking of the droplet arises due to the wave produced from the previous bounce.  In fact, the surface the droplet bounces off, which provides the horizontal motion, is dependent on a supersition of all previous bounces, assuming an appropriate decay of each wave.  This suggests that the droplet-wave association contains a path memory, where the history of the droplets affects its future motion \cite{8}.  This may be modelled by assuming each bounce produces a spherical wave centered on the positon of the bounce.  It can then shown that the height of the surface $\xi(\bm{r},t_i)$ at positon $\bm{r}$ and time $t_i$ is
+It has been discussed that the walking of the droplet arises due to the wave produced from the previous bounce.  In fact, the surface the droplet bounces off, which provides the horizontal motion, is dependent on a superposition of all previous bounces, assuming an appropriate decay of each wave.  This suggests that the droplet-wave association contains a path memory, where the history of the droplets affects its future motion \cite{8}.  This may be modelled by assuming each bounce produces a spherical wave centred on the position of the bounce.  It can then shown that the height of the surface $\xi(\bm{r},t_i)$ at position $\bm{r}$ and time $t_i$ is
 \begin{equation}
     \label{pathmemory}
     \xi(\bm{r},t_i)= \sum_{n=-\infty}^{i-1}\Re\left[\frac{A}{\left|\bm{r}-\bm{r_n}\right|^{1/2}}\exp\left(-\frac{t_i-t_n}{\tau}\right)\exp\left(-\frac{\left|\bm{r}-\bm{r_n}\right|}{\delta}\right)\exp\left(i\frac{2\pi\left|\bm{r}-\bm{r_n}\right|}{\lambda_F}+\phi\right)\right],
 \end{equation}
 where $\Re$ denotes the real part, $A$ is the wave amplitude at each impact, $\tau$ is the typical decay time and $\bm{r_n}$ and $t_n$ are the position and time of previous bounces, respectively.  As $\gamma_m$ is increased towards $\gamma_m^F$, $\tau$ also increases and hence so does the length of the path memory.
 
-In the case of a large liquid container, the horizontal motion of the walker due to this path memory is simply linear, with a well defined velocity as shown in \eqref{walkervelocity}.  But as the droplet comes close to structures is the liquid container (e.q. the side, or a narrow gap), the waves emitted from the bouncing are reflected off the structures, affecting the horizontal motion of the droplet.  This process essentially provides the droplet with informtion about its surroundings, guiding its trajectory accordingly.
+In the case of a large liquid container, the horizontal motion of the walker due to this path memory is simply linear, with a well defined velocity as shown in \eqref{walkervelocity}.  But as the droplet comes close to structures is the liquid container (e.q. the side, or a narrow gap), the waves emitted from the bouncing are reflected off the structures, affecting the horizontal motion of the droplet.  This process essentially provides the droplet with information about its surroundings, guiding its trajectory accordingly.
 
 \section{Quantum Mechanical Significance}
 \label{sec:quantummechanicalsignificance}
@@ -235,27 +235,30 @@ An experiment carried out by J. Bush et al. \cite{12} has shown that in the long
 \section{Proposed Experiment}
 \label{sec:proposedexperiment}
 
-The preposed experiment is to further the work of J. Bush et al. \cite{12} in investigating the statistics of walkers confined to corrals with dimensions comparable to $\lambda_F$.  In the aforementioned report, only a circular geometry for the corral was investigated.  In this experiment, several corral geometries will be used, investigating in each case whether the statistics of the position of the walker are related to the Faraday mode of the corral.
+The proposed experiment is to further the work of J. Bush et al. \cite{12} in investigating the statistics of walkers confined to corrals with dimensions comparable to $\lambda_F$.  In the aforementioned report, only a circular geometry for the corral was investigated.  In this experiment, several corral geometries will be used, investigating in each case whether the statistics of the position of the walker are related to the Faraday mode of the corral.
 
 % corrals to be used
-The corrals which will be investigated will have dimensions of a few multiples of $\lambda_F$.  This is to ensure that the effects of the confinment of the the walker will be consequential in the motion of the walker.  For large corrals, the natural damping of the localised Faraday waves would cause edges of the corrals to only become significant as the walker approaches them, as opposed to the small corral case where the entire geometery of the corral affects the motion of the walker continuously.
+The corrals which will be investigated will have dimensions of a few multiples of $\lambda_F$.  This is to ensure that the effects of the confinement of the the walker will be consequential in the motion of the walker.  For large corrals, the natural damping of the localised Faraday waves would cause edges of the corrals to only become significant as the walker approaches them, as opposed to the small corral case where the entire geometry of the corral affects the motion of the walker continuously.
 The corrals will also vary in geometry, with circular, square and irregular geometries all being investigated.  From existing results \cite{12}, it is expected that the motion and statistics of the droplet will be related to the Faraday modes of the corrals, therefore relatively simple geometries will be used initially, allowing the calculation of the Faraday modes for comparison to the walker statistics.  The corrals will be created using a plastic 3-D printer, allowing easy, inexpensive design and redesign of the geometry.  If it becomes apparent that a high degree of precision is required in the dimensions of the corrals, then other options are available (e.g. CNC machining of the corrals).
 
 % liquid (water?, silicon oil)
-
-% long path memory requirements
+The liquid that will primarily be used will be silicon oil, as this has been used extensively in previous experiments.  Various viscosities will be experimented with in the range $\SI{5e-3}{\pascal\second}$ to $\SI{0.1}{\pascal\second}$ \cite{9}.  This will allow experimental verification of \eqref{faradaythreshold} and any other dependencies such as droplet size and optimal driving frequency.
+Water will also be tried due to its accessibility.  It is expected that obtaining a stable bouncing droplet when using water will be difficult to obtain, although the process will provide insight into the liquid requirements for such a system.
 
 % Initial experiments of bouncing droplets
+Initially, a simple setup will be used to induce a bouncing droplet.  A vibration generator will be fed by the amplified signal from a signal generator.  The vibration generator will be vertically accelerating a basin which will contain the liquid.  This basin will be created using 3-D printing and will have a simple square or circular geometry with a flat base, set perpendicular to the acceleration.  Silicon oil and water will then be used to setup a bouncing, then walking droplet by slowly increasing the acceleration of the basin.  The Faraday threshold will also be found for each liquid.  Once this simple setup has shown that walkers may be created, the basin will be replaced with the corrals under investigation in this experiment.
+
+% long path memory requirements
+The walker's motion within the corrals will depend on the wave field created by the walker.  This wave field is sustained by vibrating the corrals with an acceleration near the Faraday threshold.  The motion  of the walkers will therefore be investigated with increasing acceleration, where the path memory is also slowly increased.  Results in the long path memory limit are of the most interest as this provides the walker with an entire picture of its surroundings, and these results may be compared to quantum analogies of the system.
 
 % walker tracking
+For any statistical analysis of the walkers position to occur, the horizontal motion of the walker must be tracked continuously during its time in the corral.  Ideally, this will be achieved using a digital camera and appropriate motion tracking software, with the camera mounted directly above the corrals so as not to distort the image and avoid any capturing of the vertical bouncing motion of the walker.  Assuming a stable walker-corral setup can be obtained with the walker avoiding coalescence indefinitely, the camera could be left to track the motion of the walker.  The resulting video footage could then be analysed at a later time with the software to determine the walkers position and velocity with time.
 
 % statistical processing
+Using the position and velocity of the walker with time, a statistical analysis of the walkers position will be performed with MATLAB in an attempt the produce results similar to that in \figref{fig:walkercorral}.  These results from each corral will be compared to the Faraday modes of the corrals.  The quantum analog of each corral will also be compared to the results, as the walkers confined to corrals are reminiscent of a 2-D particles in a box.  This will provide insight to the extent of the walker's ability to replicate quantum results.
 
 % numerical modelling of walker
-
-% quantum analogy with de broglie-bohm theory and particle in a box
-
-
+Finally, a numerical model for the walkers confined to corrals is desired.  This will primarily be based on \eqref{pathmemory}, where the reflections from the sides of the corral can be modelled as additional wave sources.  This model would enable the easy investigation of small variation in the corral dimensions and liquid density and surface tension.
 
 % The proposed experiment is to further the work of J. Bush et al. in investigating the statistics of walkers confined to corrals with dimensions comparable to $\lambda_F$.  This will be done by inducing walkers in corrals filled with silicon oil, as used in previous experiments, which are subject to a vertical oscillation.  A variety of corral geometries will be investigated, including the original circular corral, ensuring that previous results can be realised \cite{12}.
 %
